@@ -1,8 +1,8 @@
-# ArkOS framework configuration
+# ARK OS framework configuration
 # This file declares the framework version and modules active in this repository.
 # Planned tooling (not published yet): npx arkos upgrade, npx arkos proof.
 
-# The version of the ArkOS framework this repository was initialised with.
+# The version of the ARK OS framework this repository was initialised with.
 arkos-version: "0.2.1"
 
 # Short identifier for this project. Used in proof sheet generation.
@@ -28,5 +28,5 @@ ide-adapters:
   cursor: true           # .cursor/rules/arkos.mdc present
   claude-extension: true # .claude/ rules, commands, and hooks present
 
-# Date this repository was initialised with ArkOS. Replace with today's date (YYYY-MM-DD) before your first commit.
+# Date this repository was initialised with ARK OS. Replace with today's date (YYYY-MM-DD) before your first commit.
 created: "<YYYY-MM-DD>"

@@ -1,4 +1,4 @@
-# ARKOS
+# ARK OS
 ## The Governed Operating System for Agentic Software Development
 
 **Version 0.2.1** | **Australian English** | **October 2026**
@@ -9,11 +9,11 @@
 
 ## TL;DR
 
-ArkOS is a portable, IDE-agnostic spec and governance framework that ships as files and conventions inside the codebase itself. It turns any AI coding agent (Claude Code, GitHub Copilot, Cursor, Codex, Windsurf) into an enterprise-grade engineer by binding it to a single source of truth (AGENTS.md), a project constitution, EARS-based specs, Nygard ADRs, and five CI-enforced governance gates.
+ARK OS is a portable, IDE-agnostic spec and governance framework that ships as files and conventions inside the codebase itself. It turns any AI coding agent (Claude Code, GitHub Copilot, Cursor, Codex, Windsurf) into an enterprise-grade engineer by binding it to a single source of truth (AGENTS.md), a project constitution, EARS-based specs, Nygard ADRs, and five CI-enforced governance gates.
 
 v1 is deliberately lightweight: Essential Eight ML1, OWASP ASVS v5 L1, WCAG 2.2 AA, APP 1/5/11, CycloneDX SBOM, Conventional Commits, Keep a Changelog. Enough to clear most SMB and mid-market procurement reviews. Not so much that a solo developer drowns.
 
-A solo dev adopts ArkOS in an afternoon. An enterprise procurement reviewer can verify the evidence trail from the repo alone.
+A solo dev adopts ARK OS in an afternoon. An enterprise procurement reviewer can verify the evidence trail from the repo alone.
 
 ---
 
@@ -21,21 +21,21 @@ A solo dev adopts ArkOS in an afternoon. An enterprise procurement reviewer can 
 
 **One line:**
 
-> ArkOS is the governed operating system for agentic software development. Specs, decisions, gates and audit trails ship with the code, so any AI coding agent behaves like an enterprise engineer.
+> ARK OS is the governed operating system for agentic software development. Specs, decisions, gates and audit trails ship with the code, so any AI coding agent behaves like an enterprise engineer.
 
-**Where ArkOS comes from:**
+**Where ARK OS comes from:**
 
-ArkOS is the reusable IP asset at the centre of ARK360's practice. ARK360 is a consulting and product engineering practice that builds intelligent enterprise systems to amplify human excellence. ArkOS is how that practice delivers repeatably — the opinionated framework ARK360 brings into every engagement, now shipped openly so the broader community can build on it.
+ARK OS is the reusable IP asset at the centre of ARK360's practice. ARK360 is a consulting and product engineering practice that builds intelligent enterprise systems to amplify human excellence. ARK OS is how that practice delivers repeatably — the opinionated framework ARK360 brings into every engagement, now shipped openly so the broader community can build on it.
 
-ArkOS is open-source because the best frameworks earn authority through adoption, not through being kept proprietary. If ArkOS makes agentic development more reliable and effective for the industry, that serves ARK360's mission.
+ARK OS is open-source because the best frameworks earn authority through adoption, not through being kept proprietary. If ARK OS makes agentic development more reliable and effective for the industry, that serves ARK360's mission.
 
-**The problem ArkOS solves:**
+**The problem ARK OS solves:**
 
 Every AI coding tool ships its own conventions. CLAUDE.md, `.cursorrules`, `.github/copilot-instructions.md` — useful individually, inconsistent collectively. Agentic development without a framework is fast until something goes wrong, then it is slow in exactly the ways enterprise environments cannot afford: no audit trail, no traceability, no reproducible process, no evidence for procurement.
 
-ArkOS is the portable layer above the tools. The codebase carries the governance. The agent reads it. The gates enforce it. The repo proves it.
+ARK OS is the portable layer above the tools. The codebase carries the governance. The agent reads it. The gates enforce it. The repo proves it.
 
-**What ArkOS is not:**
+**What ARK OS is not:**
 
 - Not a runtime. No policy engine, no telemetry collector, no inference proxy.
 - Not a CI provider. Ships a workflow skeleton for GitHub Actions; does not run jobs.
@@ -44,9 +44,9 @@ ArkOS is the portable layer above the tools. The codebase carries the governance
 
 ---
 
-## 2. The ArkOS Manifesto
+## 2. The ARK OS Manifesto
 
-Six principles. Non-negotiable for any project claiming ArkOS conformance.
+Six principles. Non-negotiable for any project claiming ARK OS conformance.
 
 1. **Intent is the artefact. Code is the rendering.** The spec, the ADR and the constitution are version-controlled. The implementation regenerates from them.
 2. **Portable over proprietary.** AGENTS.md is the single source of truth. IDE-native files are thin pointers, not copies.
@@ -57,7 +57,7 @@ Six principles. Non-negotiable for any project claiming ArkOS conformance.
 
 ---
 
-## 3. Standards ArkOS binds to
+## 3. Standards ARK OS binds to
 
 | Layer | Standard | Why |
 |---|---|---|
@@ -76,7 +76,7 @@ Six principles. Non-negotiable for any project claiming ArkOS conformance.
 
 ---
 
-## 4. The ArkOS file tree
+## 4. The ARK OS file tree
 
 Mandatory **[M]**, recommended **[R]**, optional **[O]**.
 
@@ -127,7 +127,7 @@ Mandatory **[M]**, recommended **[R]**, optional **[O]**.
 ```markdown
 # AGENTS.md
 
-This repository is governed by **ArkOS v0.2.1**. Read `.arkos/constitution.md` before doing anything else.
+This repository is governed by **ARK OS v0.2.1**. Read `.arkos/constitution.md` before doing anything else.
 
 ## Project
 A short paragraph: what this is, who uses it, why it exists. No marketing copy.
@@ -204,7 +204,7 @@ If you are about to break one, stop and open an ADR.
 
 ## 6. IDE adapters
 
-| IDE | AGENTS.md native? | ArkOS adapter |
+| IDE | AGENTS.md native? | ARK OS adapter |
 |---|---|---|
 | GitHub Copilot | Yes (since Aug 2025) | Optional `.github/copilot-instructions.md` pointer |
 | Cursor | Yes | Optional `.cursor/rules/arkos.mdc` pointer |
@@ -217,7 +217,7 @@ If you are about to break one, stop and open an ADR.
 
 ```markdown
 <!-- CLAUDE.md -->
-This project is governed by ArkOS. Read AGENTS.md first.
+This project is governed by ARK OS. Read AGENTS.md first.
 
 @AGENTS.md
 
@@ -231,7 +231,7 @@ Claude Code notes:
 
 ```markdown
 <!-- .github/copilot-instructions.md -->
-This project is governed by ArkOS. Primary instructions live in AGENTS.md at the repo root.
+This project is governed by ARK OS. Primary instructions live in AGENTS.md at the repo root.
 Apply those instructions to all generated code, including Copilot Workspace tasks.
 ```
 
@@ -239,10 +239,10 @@ Apply those instructions to all generated code, including Copilot Workspace task
 
 ```markdown
 ---
-description: ArkOS governance pointer
+description: ARK OS governance pointer
 alwaysApply: true
 ---
-This project is governed by ArkOS. The single source of truth is AGENTS.md at the repo root.
+This project is governed by ARK OS. The single source of truth is AGENTS.md at the repo root.
 Read it before any change.
 ```
 
@@ -301,7 +301,7 @@ Read it before any change.
 | Observability wired | Structured logs; one metric per SLO; one alert per failure mode |
 | On-call recorded | Runbook lists rotation |
 
-CI cannot fully enforce the Run gate. ArkOS ships a `run-readiness` checklist in `proof-sheet.md` that humans tick before production promotion.
+CI cannot fully enforce the Run gate. ARK OS ships a `run-readiness` checklist in `proof-sheet.md` that humans tick before production promotion.
 
 ---
 
@@ -311,7 +311,7 @@ CI cannot fully enforce the Run gate. ArkOS ships a `run-readiness` checklist in
 2. **CLI scaffolder** (`npx create-arkos@latest`) — **planned, not available**. Five questions, writes the tree. Updatable with `npx arkos upgrade` (also planned, not available).
 3. **Modules registry** (`arkos-modules`) — planned. Stack add-ons: `arkos-module-nextjs`, `arkos-module-fastify`, `arkos-module-llm-feature`.
 
-**Versioning:** `.arkos/arkos.yml` records the framework version and modules adopted. When published, `npx arkos upgrade` will perform a three-way merge — user content in `specs/`, `adr/`, `threat-models/`, `runbooks/` is preserved; framework content is overwritable. Until then, adopt or update ArkOS by using this GitHub template or by copying files from this repository.
+**Versioning:** `.arkos/arkos.yml` records the framework version and modules adopted. When published, `npx arkos upgrade` will perform a three-way merge — user content in `specs/`, `adr/`, `threat-models/`, `runbooks/` is preserved; framework content is overwritable. Until then, adopt or update ARK OS by using this GitHub template or by copying files from this repository.
 
 **Licensing:** Apache 2.0. Maximises adoption. Grants patent peace. Requires downstream attribution to ARK360.
 
@@ -339,9 +339,9 @@ Agents that previously drifted, hallucinated APIs and produced phantom completio
 ## 10. The procurement proof sheet
 
 ```markdown
-# ArkOS Proof Sheet — <Project Name>
+# ARK OS Proof Sheet — <Project Name>
 
-This codebase was built under **ArkOS v0.2.1** governance.
+This codebase was built under **ARK OS v0.2.1** governance.
 The complete evidence trail is in the repository.
 
 ## Conformance summary
@@ -355,7 +355,7 @@ The complete evidence trail is in the repository.
 | Supply chain | CycloneDX SBOM | 1.6+ | `sbom.cdx.json` per release |
 | Change management | Conventional Commits + ADR | Mandatory | `CHANGELOG.md`, `.arkos/adr/` |
 
-## What ArkOS governance guarantees
+## What ARK OS governance guarantees
 1. Every change has an EARS-based, testable, traceable spec.
 2. Every architecturally significant decision has an ADR.
 3. Every feature touching personal data has a privacy review (APP 1, 5, 11).
@@ -376,10 +376,10 @@ Coordinated disclosure: `SECURITY.md`. Owner: <name>. Last review: <date>.
 
 ## 11. Brand and visual identity
 
-ArkOS is an open-source release from ARK360 and shares the practice's visual identity.
+ARK OS is an open-source release from ARK360 and shares the practice's visual identity.
 
 ### Wordmark
-**ARKOS** — bold ARK, thin OS. The hexagonal mark is the shared family symbol between ArkOS and ARK360.
+**ARK OS** - bold ARK, thin OS. The hexagonal mark is the shared family symbol between ARK OS and ARK360.
 
 ### Colour palette
 
@@ -412,8 +412,8 @@ Write the way people think in high-stakes meetings. Short sentences. Real rhythm
 
 | Term | Rule |
 |---|---|
-| ArkOS | The framework. Never "Arkos" in body copy; reserve all-caps for the wordmark. |
-| ArkOS Gate | One of the five governance gates. |
+| ARK OS | The framework. Always two words, all caps. Never "Arkos" in body copy. The wordmark is ARK OS. |
+| ARK OS Gate | One of the five governance gates. |
 | Build / Ship / Run / Plan / Research gate | Lowercase "gate" after the proper noun. |
 | AGENTS.md | Always all-caps with the `.md`. |
 | Proof Sheet | The procurement one-pager. Capitalised as a proper noun. |
@@ -426,7 +426,7 @@ Write the way people think in high-stakes meetings. Short sentences. Real rhythm
 - **Vendor velocity.** AGENTS.md is native in Copilot, Cursor, Windsurf, Codex. Claude Code still requires a pointer (May 2026). If Anthropic ships native support, the Claude Code adapter collapses to nothing.
 - **AGENTS.md spec is unversioned.** Zero tagged releases on the agents.md GitHub repo as of May 2026. Do not depend on speculative v1.1 semantics.
 - **Gates are necessary, not sufficient.** A green build gate means the obvious failure modes were caught. Reviewer judgement still matters.
-- **Lightweight enterprise is a posture, not a moat.** ArkOS v1 clears most SMB and mid-market procurement reviews. Federal government, finance and health reviews requiring IRAP or APRA CPS 234 need v2 or a separately scoped ARK360 engagement.
+- **Lightweight enterprise is a posture, not a moat.** ARK OS v1 clears most SMB and mid-market procurement reviews. Federal government, finance and health reviews requiring IRAP or APRA CPS 234 need v2 or a separately scoped ARK360 engagement.
 - **The framework cannot enforce culture.** Gates catch the worst. The rest depends on the people in the room.
 
 ---
@@ -443,4 +443,4 @@ Write the way people think in high-stakes meetings. Short sentences. Real rhythm
 
 ---
 
-*ArkOS is an open-source release from ARK360 — building intelligent enterprise systems to amplify human excellence.*
+*ARK OS is an open-source release from ARK360 — building intelligent enterprise systems to amplify human excellence.*

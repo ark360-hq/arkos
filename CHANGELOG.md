@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to ArkOS are documented in this file.
+All notable changes to ARK OS are documented in this file.
 
 This project follows [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning 2.0](https://semver.org/).
 
@@ -10,11 +10,13 @@ This project follows [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/
 
 ### Changed
 
+- Brand prose and wordmark now use ARK OS (two words, all caps); camel-case and smashed-wordmark forms retired in current docs (SPEC-0011)
 - `docs/framework.md` roadmap now records v0.2.1 as released and lists v0.3 (Microsoft agentic module: Foundry Agent Service, Copilot Studio, Entra Agent ID, approvals, evals and tracing) as plan stage only; stale Stage 1 ship/tag `v0.1.0` wording removed (SPEC-0010)
 - `CONTRIBUTING.md` now matches `AGENTS.md`: every file change needs an approved spec and a feature branch, including small and documentation fixes (SPEC-0010)
 
 ### Added
 
+- `.arkos/specs/0011-brand-rename-ark-os.md` - spec for the brand rename in prose and branding (SPEC-0011)
 - `.arkos/specs/0010-roadmap-contributing-tidy.md` - spec for the post-v0.2.1 roadmap and contributing tidy-up (SPEC-0010)
 
 ## [0.2.1] - 2026-10-09

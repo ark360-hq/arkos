@@ -15,7 +15,7 @@ linked-threat-model: null
 
 ## Problem
 
-Developers adopting ArkOS often arrive with a short product idea in chat. Without a structured PRD and clarifying questions, agents scaffold the wrong shape, skip non-goals, and treat SPEC-0001 as generic template work instead of PRD-driven architecture. A repeatable PRD template and discovery prompt is needed before foundation specs and stack modules (v0.2).
+Developers adopting ARK OS often arrive with a short product idea in chat. Without a structured PRD and clarifying questions, agents scaffold the wrong shape, skip non-goals, and treat SPEC-0001 as generic template work instead of PRD-driven architecture. A repeatable PRD template and discovery prompt is needed before foundation specs and stack modules (v0.2).
 
 ## Out of scope
 

@@ -1,5 +1,5 @@
 ---
-description: Review ArkOS governance readiness for the current change
+description: Review ARK OS governance readiness for the current change
 ---
 
 Run a governance readiness review for this repository. Do not edit files unless the user asks you to fix gaps.

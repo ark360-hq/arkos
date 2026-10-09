@@ -1,6 +1,6 @@
 # Standards Reference
 
-ArkOS v0.2.1 binds to these standards. Each entry lists the standard, its specific version, the rationale for inclusion, and the authoritative source.
+ARK OS v0.2.1 binds to these standards. Each entry lists the standard, its specific version, the rationale for inclusion, and the authoritative source.
 
 ---
 
@@ -94,7 +94,7 @@ ArkOS v0.2.1 binds to these standards. Each entry lists the standard, its specif
 
 ## Out of scope for v0.2.1
 
-The following standards are explicitly out of scope for ArkOS v0.2.1. They are available in later versions or via a separately scoped ARK360 engagement.
+The following standards are explicitly out of scope for ARK OS v0.2.1. They are available in later versions or via a separately scoped ARK360 engagement.
 
 | Standard | Why excluded |
 |---|---|

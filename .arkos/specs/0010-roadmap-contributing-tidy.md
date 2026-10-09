@@ -17,7 +17,7 @@ linked-threat-model: null
 
 Two published documents are out of date with the released repository and with `AGENTS.md`:
 
-1. `docs/framework.md` section 13 still describes Stage 1 as shipping the template and tagging `v0.1.0`. ArkOS v0.2.1 is already released. The next milestone is v0.3 (Microsoft agentic module: Foundry Agent Service, Copilot Studio, Entra Agent ID, approvals, evals and tracing) and that work is plan stage only.
+1. `docs/framework.md` section 13 still describes Stage 1 as shipping the template and tagging `v0.1.0`. ARK OS v0.2.1 is already released. The next milestone is v0.3 (Microsoft agentic module: Foundry Agent Service, Copilot Studio, Entra Agent ID, approvals, evals and tracing) and that work is plan stage only.
 2. `CONTRIBUTING.md` tells contributors that a spec is not required for minor corrections. `AGENTS.md` requires an approved spec and a feature branch for every file change, including documentation updates, config tweaks, typo fixes, and other small changes.
 
 Readers who follow those two files get the wrong release status and the wrong contribution rule.
@@ -34,7 +34,7 @@ Readers who follow those two files get the wrong release status and the wrong co
 
 ### Ubiquitous (always true, no trigger)
 
-> REQ-001: `docs/framework.md` section 13 shall state that ArkOS v0.2.1 is released.
+> REQ-001: `docs/framework.md` section 13 shall state that ARK OS v0.2.1 is released.
 
 > REQ-002: `docs/framework.md` section 13 shall describe v0.3 as the Microsoft agentic module covering Foundry Agent Service, Copilot Studio, Entra Agent ID, approvals, evals and tracing, and shall mark that work as plan stage only.
 

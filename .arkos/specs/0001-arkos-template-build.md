@@ -1,7 +1,7 @@
 ---
 id: SPEC-0001
 slug: arkos-template-build
-title: ArkOS v0.1 template repository build
+title: ARK OS v0.1 template repository build
 status: Approved
 owner: "@ark360-hq"
 created: 2026-05-13
@@ -11,7 +11,7 @@ linked-adrs: [ADR-0001, ADR-0002, ADR-0003]
 linked-threat-model: null
 ---
 
-# SPEC-0001: ArkOS v0.1 template repository build
+# SPEC-0001: ARK OS v0.1 template repository build
 
 ## Problem
 
@@ -26,7 +26,7 @@ The first deliverable is the template itself: a GitHub template repository conta
 3. An `arkos proof` command that generates a populated proof sheet from the repository (v0.3).
 4. IRAP, APRA CPS 234, Essential Eight ML2+, SOC 2 Type II conformance (out of v1 scope entirely).
 5. Deployment workflows or hosting opinions of any kind.
-6. A worked example project demonstrating ArkOS on a real stack (deferred to v0.2).
+6. A worked example project demonstrating ARK OS on a real stack (deferred to v0.2).
 
 ## Requirements
 
@@ -99,4 +99,4 @@ Not applicable. This spec covers the framework repository build itself; it does 
 
 ## Accessibility notes
 
-Not applicable. This spec produces documentation and CI tooling, not a user interface. Accessibility obligations apply to projects built on top of ArkOS, not the framework repository.
+Not applicable. This spec produces documentation and CI tooling, not a user interface. Accessibility obligations apply to projects built on top of ARK OS, not the framework repository.

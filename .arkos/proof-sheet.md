@@ -1,6 +1,6 @@
-# ArkOS Proof Sheet - <Project Name>
+# ARK OS Proof Sheet - <Project Name>
 
-This codebase was built under **ArkOS v0.2.1** governance.
+This codebase was built under **ARK OS v0.2.1** governance.
 The complete evidence trail is in the repository.
 
 Fill in the `<placeholder>` fields before presenting this document to a procurement reviewer.
@@ -20,7 +20,7 @@ Fill in the `<placeholder>` fields before presenting this document to a procurem
 
 ---
 
-## What ArkOS governance guarantees
+## What ARK OS governance guarantees
 
 1. Every change has an EARS-based, testable, traceable spec.
 2. Every architecturally significant decision has an ADR.
@@ -47,7 +47,7 @@ Complete this checklist before promoting to production. CI cannot automate all r
 
 IRAP; Essential Eight ML2+; SLSA L3+; ISO 27001 full ISMS; SOC 2 Type II.
 
-These are available in later versions of ArkOS or as a separately scoped engagement through ARK360.
+These are available in later versions of ARK OS or as a separately scoped engagement through ARK360.
 
 ---
 

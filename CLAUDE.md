@@ -1,5 +1,5 @@
 <!-- CLAUDE.md -->
-This project is governed by ArkOS. AGENTS.md is authoritative. You are the active enforcer of the governance, not a passive participant. Run the pre-flight checks in AGENTS.md before every code-changing action and stop to prompt the user when a check fails.
+This project is governed by ARK OS. AGENTS.md is authoritative. You are the active enforcer of the governance, not a passive participant. Run the pre-flight checks in AGENTS.md before every code-changing action and stop to prompt the user when a check fails.
 
 @AGENTS.md
 

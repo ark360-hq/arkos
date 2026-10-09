@@ -1,16 +1,16 @@
-# ArkOS
+# ARK OS
 
 **The governed operating system for agentic software development.**
 
-ArkOS is a GitHub template repository. Use it as the starting point for any project where you need an AI coding agent to behave like an enterprise engineer: spec-driven, auditable, and compliant with Australian security, privacy, and accessibility baselines.
+ARK OS is a GitHub template repository. Use it as the starting point for any project where you need an AI coding agent to behave like an enterprise engineer: spec-driven, auditable, and compliant with Australian security, privacy, and accessibility baselines.
 
 It is a files-and-conventions framework. No runtime. No inference proxy. No vendor lock-in. The governance travels with the codebase.
 
-`npx create-arkos` and `npx arkos upgrade` are **planned and not available**. The current way to use ArkOS is to click **Use this template** on GitHub (or clone this repository and copy the file tree). See Quickstart below.
+`npx create-arkos` and `npx arkos upgrade` are **planned and not available**. The current way to use ARK OS is to click **Use this template** on GitHub (or clone this repository and copy the file tree). See Quickstart below.
 
 ---
 
-## What ArkOS gives you
+## What ARK OS gives you
 
 | What | File | Purpose |
 |---|---|---|
@@ -47,7 +47,7 @@ See `docs/standards.md` for versions, rationale, and source links.
 
 ## IDE support
 
-ArkOS works with any IDE that reads `AGENTS.md` natively. No configuration required for those IDEs. Thin adapter files are included for IDEs that need a pointer.
+ARK OS works with any IDE that reads `AGENTS.md` natively. No configuration required for those IDEs. Thin adapter files are included for IDEs that need a pointer.
 
 | IDE | Works how |
 |---|---|
@@ -60,13 +60,13 @@ ArkOS works with any IDE that reads `AGENTS.md` natively. No configuration requi
 
 ## Tech stack support
 
-ArkOS is stack-agnostic. The base template contains no stack-specific code, commands, or dependencies. You wire your own install, lint, typecheck, test, and SBOM commands into the CI workflow after adopting the template.
+ARK OS is stack-agnostic. The base template contains no stack-specific code, commands, or dependencies. You wire your own install, lint, typecheck, test, and SBOM commands into the CI workflow after adopting the template.
 
 ---
 
 ## The five governance gates
 
-These gates are the core of ArkOS. Each gate has a named question, machine-readable criteria in `.arkos/gates/`, and CI enforcement where automation is possible.
+These gates are the core of ARK OS. Each gate has a named question, machine-readable criteria in `.arkos/gates/`, and CI enforcement where automation is possible.
 
 | Gate | Question | Runs on |
 |---|---|---|
@@ -132,10 +132,10 @@ The banned-pattern checks in `.arkos/scripts/check-banned-patterns.sh` include t
 ## Framework documentation
 
 - `QUICKSTART.md` - step-by-step onboarding guide
-- `docs/framework.md` - the ArkOS v0.2.1 framework document
+- `docs/framework.md` - the ARK OS v0.2.1 framework document
 - `docs/standards.md` - standards reference with versions and rationale
 - `docs/adr/` - framework-level architectural decisions
-- `CONTRIBUTING.md` - how to propose changes to ArkOS itself
+- `CONTRIBUTING.md` - how to propose changes to ARK OS itself
 
 ---
 
@@ -143,4 +143,4 @@ The banned-pattern checks in `.arkos/scripts/check-banned-patterns.sh` include t
 
 Apache 2.0. Copyright 2026 ARK360. See `LICENSE` and `NOTICE`.
 
-ArkOS is an open-source release from ARK360 - building intelligent enterprise systems to amplify human excellence.
+ARK OS is an open-source release from ARK360 - building intelligent enterprise systems to amplify human excellence.

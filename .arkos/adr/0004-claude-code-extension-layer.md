@@ -12,11 +12,11 @@
 
 ## Context
 
-Claude Code reads project configuration from `CLAUDE.md`, `.claude/settings.json`, `.claude/rules/`, `.claude/commands/`, hooks, and `.mcp.json`. ArkOS v0.1 ships only `CLAUDE.md` as a thin `@AGENTS.md` pointer (ADR-0001). Teams want Claude-native ergonomics without moving governance out of `AGENTS.md` or disadvantaging Copilot, Cursor, and AGENTS.md-native IDEs.
+Claude Code reads project configuration from `CLAUDE.md`, `.claude/settings.json`, `.claude/rules/`, `.claude/commands/`, hooks, and `.mcp.json`. ARK OS v0.1 ships only `CLAUDE.md` as a thin `@AGENTS.md` pointer (ADR-0001). Teams want Claude-native ergonomics without moving governance out of `AGENTS.md` or disadvantaging Copilot, Cursor, and AGENTS.md-native IDEs.
 
 ## Decision
 
-ArkOS v0.2 adds an **optional** `.claude/` extension layer and `.mcp.json.example` for Claude Code only. Universal governance remains in `AGENTS.md`. `CLAUDE.md` remains a thin adapter. Files under `.claude/rules/` are pointers, not copies of `AGENTS.md`. Hooks and MCP configuration ship disabled or example-only by default. Framework version bumps to 0.2 with `claude-extension: true` in `.arkos/arkos.yml`.
+ARK OS v0.2 adds an **optional** `.claude/` extension layer and `.mcp.json.example` for Claude Code only. Universal governance remains in `AGENTS.md`. `CLAUDE.md` remains a thin adapter. Files under `.claude/rules/` are pointers, not copies of `AGENTS.md`. Hooks and MCP configuration ship disabled or example-only by default. Framework version bumps to 0.2 with `claude-extension: true` in `.arkos/arkos.yml`.
 
 ## Consequences
 

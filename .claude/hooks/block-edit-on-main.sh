@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# ArkOS sample hook: block Edit/Write on main branch.
+# ARK OS sample hook: block Edit/Write on main branch.
 # Enable in .claude/settings.json (see hooks/README.md). Requires jq.
 set -euo pipefail
 
@@ -18,6 +18,6 @@ jq -n '{
   hookSpecificOutput: {
     hookEventName: "PreToolUse",
     permissionDecision: "deny",
-    permissionDecisionReason: "ArkOS: create a feature branch before editing. AGENTS.md requires feat/SPEC-NNNN-slug, not main."
+    permissionDecisionReason: "ARK OS: create a feature branch before editing. AGENTS.md requires feat/SPEC-NNNN-slug, not main."
   }
 }'

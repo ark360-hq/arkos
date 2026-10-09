@@ -1,8 +1,8 @@
-# Contributing to ArkOS
+# Contributing to ARK OS
 
-ArkOS welcomes contributions from the community. This document explains how to contribute to the framework itself.
+ARK OS welcomes contributions from the community. This document explains how to contribute to the framework itself.
 
-If you are using ArkOS in your own project, this file is for you only if you want to propose changes to the framework.
+If you are using ARK OS in your own project, this file is for you only if you want to propose changes to the framework.
 
 ---
 
@@ -34,8 +34,8 @@ The build gate CI check enforces a spec reference: every PR must reference a `SP
 
 A structural change is any change that:
 
-- Adds, removes, or renames a mandatory file in the ArkOS file tree
-- Changes which standards ArkOS binds to
+- Adds, removes, or renames a mandatory file in the ARK OS file tree
+- Changes which standards ARK OS binds to
 - Changes the gate schema in `.arkos/gates/`
 - Changes the AGENTS.md template structure
 
@@ -47,7 +47,7 @@ ADRs are immutable. Once accepted, an ADR cannot be edited. To change a decision
 
 ## Code of conduct
 
-ArkOS follows the Contributor Covenant v2.1. All contributors are expected to:
+ARK OS follows the Contributor Covenant v2.1. All contributors are expected to:
 
 - Be respectful in all communication.
 - Critique ideas, not people.

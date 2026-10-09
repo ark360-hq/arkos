@@ -21,7 +21,7 @@ The v0.1 AGENTS.md instructs the agent to run pre-flight checks before every cod
 2. Documentation and configuration changes were treated as exempt from the spec-first requirement because they do not feel like "features."
 3. Branch creation appears at step 8 of the new-feature workflow - after the agent has already started drafting content - so it was skipped.
 
-The result was the agent editing files on a merged branch without a spec, which is exactly the governance failure ArkOS is designed to prevent. A developer using this template should not have to manually redirect the agent back to the process. The framework should catch itself.
+The result was the agent editing files on a merged branch without a spec, which is exactly the governance failure ARK OS is designed to prevent. A developer using this template should not have to manually redirect the agent back to the process. The framework should catch itself.
 
 ## Out of scope
 
