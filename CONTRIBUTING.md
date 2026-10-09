@@ -8,26 +8,25 @@ If you are using ArkOS in your own project, this file is for you only if you wan
 
 ## How to propose changes to the framework
 
-All framework changes start with a spec or ADR, not a pull request.
+Every change that edits a file in this repository needs an approved spec and a feature branch. There are no exceptions for documentation updates, config tweaks, typo fixes, CHANGELOG entries, or other small changes.
 
-**For minor corrections** (typos, clarifications, broken links):
-Open a GitHub issue describing the problem. A spec is not required for corrections.
+1. Write a spec in `.arkos/specs/` from `_template.md` using EARS notation. Include the problem, at least three out-of-scope items, requirements, and acceptance criteria.
+2. If the change affects an architectural decision (which standard to bind to, which file format to use), file an ADR in `.arkos/adr/` before the spec is approved.
+3. Set the spec `status` to `Approved` only after an explicit confirmation.
+4. Open a GitHub issue that references the spec ID and summarises the change. The issue is the branch's traceable anchor (issue before branch).
+5. Create a feature branch named `feat/SPEC-NNNN-slug`. Do not edit files on `main` or on a previously merged branch.
+6. Implement the change, add tests mapped to each REQ, and update `CHANGELOG.md` under `[Unreleased]`.
+7. Open a pull request that references `SPEC-NNNN` and includes `Closes #N` for the issue opened in step 4.
 
-**For changes to framework behaviour** (new gates, modified templates, new conventions):
-1. Open a GitHub issue describing the problem the change solves.
-2. Write a spec in `.arkos/specs/` describing the proposed change using EARS notation. Reference the issue.
-3. If the change affects an architectural decision (which standard to bind to, which file format to use), file an ADR in `.arkos/adr/`.
-4. Open a pull request referencing the spec.
-
-The spec must reach `status: Approved` before the pull request can merge.
+The spec must reach `status: Approved` before implementation starts.
 
 ---
 
 ## The spec-before-PR rule
 
-No pull request may introduce a behaviour change without an approved spec. This applies to all contributors, including maintainers.
+No pull request may change a file without an approved spec. This applies to all contributors, including maintainers.
 
-The build gate CI check enforces this: every PR must reference a `SPEC-[0-9]+` in the title or body.
+The build gate CI check enforces a spec reference: every PR must reference a `SPEC-[0-9]+` in the title, body, or commit messages.
 
 ---
 
