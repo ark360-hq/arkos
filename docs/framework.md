@@ -433,11 +433,11 @@ Write the way people think in high-stakes meetings. Short sentences. Real rhythm
 
 ## 13. Roadmap
 
-**Stage 1 (next 2 weeks):** Ship `arkos-template` on GitHub under the ARK360 org. Apache 2.0. Tag `v0.1.0`. Pilot on one live engagement.
+**Released:** v0.2.1 (9 October 2026). The GitHub template is published under the `ark360-hq` organisation. Apache 2.0.
 
-**Stage 2 (planned):** Build `npx create-arkos@latest` CLI with `arkos upgrade` and IDE adapter selection. These commands are not published yet.
+**v0.3 (plan stage only):** Microsoft agentic module covering Foundry Agent Service, Copilot Studio, Entra Agent ID, approvals, evals and tracing. Nothing is built until a spec (and any required ADR, contract, or threat model) is approved.
 
-**Stage 3 (weeks 7-12):** Modules registry and an `arkos proof` command that generates a populated proof sheet from the repo.
+**Later (planned, not available):** `npx create-arkos@latest` CLI with `arkos upgrade` and IDE adapter selection. Modules registry and an `arkos proof` command that generates a populated proof sheet from the repo.
 
 **Triggers for v2:** A client requires Essential Eight ML2 or IRAP. Anthropic ships native AGENTS.md in Claude Code. AAIF ratifies AGENTS.md v1.1. The practice wants a commercial conformance attestation service alongside the open framework.
 
