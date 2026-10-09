@@ -1,5 +1,5 @@
 {
-  "_comment": "EXAMPLE ONLY. Copy to .mcp.json when your team is ready. Not required for ArkOS. Servers below will not work until you install and configure them. Never commit secrets.",
+  "_comment": "EXAMPLE ONLY. Copy to .mcp.json when your team is ready. Not required for ARK OS. Servers below will not work until you install and configure them. Never commit secrets.",
   "mcpServers": {
     "example-memory": {
       "command": "npx",

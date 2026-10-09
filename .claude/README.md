@@ -1,6 +1,6 @@
 # Claude Code extension layer (optional)
 
-This directory is **optional**. ArkOS governance lives in `AGENTS.md` at the repository root. Every IDE reads that file; Claude Code users may also use this folder for team-shared settings, slash commands, and hooks.
+This directory is **optional**. ARK OS governance lives in `AGENTS.md` at the repository root. Every IDE reads that file; Claude Code users may also use this folder for team-shared settings, slash commands, and hooks.
 
 ## When to use what
 

@@ -16,7 +16,7 @@ Multiple agentic IDEs ship their own instruction file conventions. CLAUDE.md, `.
 
 ## Decision
 
-AGENTS.md is the single source of truth for agent instructions in any ArkOS-governed repository. IDE-specific files (CLAUDE.md, `.cursor/rules/arkos.mdc`, `.github/copilot-instructions.md`) are thin pointers to AGENTS.md only. No governance content is duplicated into adapter files.
+AGENTS.md is the single source of truth for agent instructions in any ARK OS-governed repository. IDE-specific files (CLAUDE.md, `.cursor/rules/arkos.mdc`, `.github/copilot-instructions.md`) are thin pointers to AGENTS.md only. No governance content is duplicated into adapter files.
 
 ## Consequences
 

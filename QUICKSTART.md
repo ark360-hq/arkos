@@ -1,6 +1,6 @@
-# ArkOS Quickstart
+# ARK OS Quickstart
 
-A developer with no prior ArkOS knowledge can follow this guide and make their first governed commit in 30 to 60 minutes. Wiring CI commands for a full stack typically takes an afternoon. The 15-minute path is "click template, clone, commit the placeholders", useful for kicking the tyres but not for real work.
+A developer with no prior ARK OS knowledge can follow this guide and make their first governed commit in 30 to 60 minutes. Wiring CI commands for a full stack typically takes an afternoon. The 15-minute path is "click template, clone, commit the placeholders", useful for kicking the tyres but not for real work.
 
 `npx create-arkos` and `npx arkos upgrade` are **planned and not available**. Use the GitHub template steps below.
 
@@ -19,7 +19,7 @@ You do not need to install anything else before adopting the template. Stack-spe
 
 ## Step 1 - Create your repository from the template
 
-1. Go to the ArkOS template repository on GitHub.
+1. Go to the ARK OS template repository on GitHub.
 2. Click **"Use this template"** then **"Create a new repository"**.
 3. Name your repository, set the owner and visibility, then click **"Create repository"**.
 
@@ -30,13 +30,13 @@ git clone https://github.com/<your-org>/<your-repo>.git
 cd <your-repo>
 ```
 
-Your repository now contains the full ArkOS file tree. Nothing is running yet. The CI workflow exists but uses placeholder commands that print instructions rather than running real tools.
+Your repository now contains the full ARK OS file tree. Nothing is running yet. The CI workflow exists but uses placeholder commands that print instructions rather than running real tools.
 
 ---
 
 ## Step 2 - Enable branch protection on `main`
 
-ArkOS enforces governance through CI gates that run on pull requests. None of those gates are mandatory unless `main` is protected. Without branch protection, any contributor (including the agent) can push directly to `main` and bypass every check.
+ARK OS enforces governance through CI gates that run on pull requests. None of those gates are mandatory unless `main` is protected. Without branch protection, any contributor (including the agent) can push directly to `main` and bypass every check.
 
 **Required settings on the `main` branch:**
 
@@ -68,7 +68,7 @@ gh api -X PUT "repos/:owner/:repo/branches/main/protection" \
 
 Adjust `required_approving_review_count` upward once you have collaborators.
 
-If branch protection is not enabled, ArkOS becomes opt-in rather than enforced. Adopt this step before your first commit.
+If branch protection is not enabled, ARK OS becomes opt-in rather than enforced. Adopt this step before your first commit.
 
 ---
 
@@ -183,7 +183,7 @@ Deployment is deliberately absent. Add a separate `.github/workflows/deploy.yml`
 
 ## Step 7 - Create the product PRD (greenfield)
 
-If this repository is a **new product** (not a framework-only repo like ArkOS itself), create the PRD before your foundation spec.
+If this repository is a **new product** (not a framework-only repo like ARK OS itself), create the PRD before your foundation spec.
 
 1. Describe your product idea to the agent in one or two paragraphs.
 2. The agent runs the interview in `.arkos/prompts/prd-discovery.md` and asks clarifying questions (users, MVP, non-goals, stack, privacy, trust boundaries).
@@ -225,7 +225,7 @@ Create a feature branch, stage your personalised files, and commit using Convent
 ```
 git checkout -b feat/initialise
 git add AGENTS.md .arkos/constitution.md .arkos/arkos.yml .arkos/specs/0001-<feature-slug>.md
-git commit -m "feat: initialise project with ArkOS governance (SPEC-0001)"
+git commit -m "feat: initialise project with ARK OS governance (SPEC-0001)"
 ```
 
 The plan gate checks that `SPEC-[0-9]+` appears in the commit message, PR title, or PR body. If it is missing, the gate fails with a clear error.
@@ -305,6 +305,6 @@ Fill in `.arkos/proof-sheet.md` with your project name, owner name, and review d
 | `.arkos/proof-sheet.md` | Procurement evidence - fill before first procurement review |
 | `.github/workflows/arkos.yml` | CI workflow - replace placeholder steps with real commands |
 | `.arkos/scripts/check-banned-patterns.sh` | Banned pattern script - replace stack-specific examples |
-| `docs/framework.md` | Full ArkOS v0.2.1 framework document |
+| `docs/framework.md` | Full ARK OS v0.2.1 framework document |
 | `docs/standards.md` | Standards reference with versions and links |
-| `CONTRIBUTING.md` | How to contribute to ArkOS itself |
+| `CONTRIBUTING.md` | How to contribute to ARK OS itself |

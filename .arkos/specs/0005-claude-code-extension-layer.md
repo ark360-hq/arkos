@@ -1,7 +1,7 @@
 ---
 id: SPEC-0005
 slug: claude-code-extension-layer
-title: Claude Code extension layer (ArkOS v0.2)
+title: Claude Code extension layer (ARK OS v0.2)
 status: Approved
 owner: "@ark360-hq"
 created: 2026-05-22
@@ -11,13 +11,13 @@ linked-adrs: [ADR-0001, ADR-0004]
 linked-threat-model: null
 ---
 
-# SPEC-0005: Claude Code extension layer (ArkOS v0.2)
+# SPEC-0005: Claude Code extension layer (ARK OS v0.2)
 
 ## Problem
 
-ArkOS v0.1 provides a thin `CLAUDE.md` adapter but no scaffold for Claude Code's native project structure (`.claude/settings.json`, rules, slash commands, hooks, MCP). Teams adopting Claude Code must invent their own layout, which risks duplicating governance out of `AGENTS.md` or committing personal settings as shared defaults.
+ARK OS v0.1 provides a thin `CLAUDE.md` adapter but no scaffold for Claude Code's native project structure (`.claude/settings.json`, rules, slash commands, hooks, MCP). Teams adopting Claude Code must invent their own layout, which risks duplicating governance out of `AGENTS.md` or committing personal settings as shared defaults.
 
-Claude Code users need optional, well-documented ergonomics that align with ArkOS gates and workflows without making non-Claude IDEs second-class.
+Claude Code users need optional, well-documented ergonomics that align with ARK OS gates and workflows without making non-Claude IDEs second-class.
 
 ## Out of scope
 
@@ -37,7 +37,7 @@ Claude Code users need optional, well-documented ergonomics that align with ArkO
 
 > REQ-003: Each file in `.claude/rules/` shall contain no more than ten lines of original content and shall point readers to `AGENTS.md` rather than restate governance.
 
-> REQ-004: The repository shall ship `.mcp.json.example` at the repository root as example-only documentation. It shall not be required for ArkOS conformance and shall contain no secrets.
+> REQ-004: The repository shall ship `.mcp.json.example` at the repository root as example-only documentation. It shall not be required for ARK OS conformance and shall contain no secrets.
 
 > REQ-005: Personal Claude overrides shall be documented via `.claude/settings.local.json.example` and excluded from git via `.gitignore`.
 

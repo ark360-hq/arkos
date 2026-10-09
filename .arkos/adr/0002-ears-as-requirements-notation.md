@@ -16,7 +16,7 @@ AI coding agents need unambiguous, testable requirements. Free-form prose requir
 
 ## Decision
 
-EARS (Easy Approach to Requirements Syntax), developed by Mavin and Stephenson (2010), is the required notation for all specs in ArkOS-governed repositories. EARS provides five sentence patterns: Ubiquitous, Event-driven, State-driven, Optional feature, and Unwanted behaviour. Every requirement must use one of these patterns and must receive a unique REQ-NNN identifier that maps to at least one test in the acceptance criteria table.
+EARS (Easy Approach to Requirements Syntax), developed by Mavin and Stephenson (2010), is the required notation for all specs in ARK OS-governed repositories. EARS provides five sentence patterns: Ubiquitous, Event-driven, State-driven, Optional feature, and Unwanted behaviour. Every requirement must use one of these patterns and must receive a unique REQ-NNN identifier that maps to at least one test in the acceptance criteria table.
 
 ## Consequences
 

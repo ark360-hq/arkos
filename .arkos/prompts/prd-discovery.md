@@ -77,7 +77,7 @@ Ask every question below. Skip only if already answered clearly in the idea; not
 | ID | Question | When to ask |
 |---|---|---|
 | Q16 | Key **integrations or vendors** (PMS, access control, identity)? | B2B / integration products |
-| Q17 | **Regulatory** context beyond ArkOS baselines (sector, jurisdiction)? | Regulated domains |
+| Q17 | **Regulatory** context beyond ARK OS baselines (sector, jurisdiction)? | Regulated domains |
 | Q18 | **Team skills** that affect stack choice? | Small teams choosing stack |
 
 ---

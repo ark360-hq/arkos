@@ -1,5 +1,5 @@
 ---
-description: Scaffold a new ArkOS spec from the template
+description: Scaffold a new ARK OS spec from the template
 ---
 
 Help the user start a new governed feature per `AGENTS.md` **Starting a new feature**.

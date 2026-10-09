@@ -1,4 +1,4 @@
-# ArkOS governance pointer
+# ARK OS governance pointer
 
 Read `AGENTS.md` at the repository root before any change. It is authoritative.
 

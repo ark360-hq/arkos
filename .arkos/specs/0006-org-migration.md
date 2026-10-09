@@ -19,7 +19,7 @@ The repository was transferred from the personal account `parkjadev/arkos` to th
 enterprise organisation `ark360-hq/arkos`. Several committed governance records still name
 the previous owner in their spec frontmatter, and this repository's own self-referential
 metadata (the CHANGELOG release link and the `arkos.yml` project identifier) still carries
-template defaults. For the ArkOS audit trail to stay trustworthy, these records must reflect
+template defaults. For the ARK OS audit trail to stay trustworthy, these records must reflect
 the new canonical home. This is a metadata correction only; no behaviour, dependency, or
 interface changes.
 

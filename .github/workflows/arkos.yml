@@ -1,8 +1,8 @@
 name: arkos
 
-# ArkOS CI workflow - governance gates only.
+# ARK OS CI workflow - governance gates only.
 #
-# This workflow enforces the five ArkOS governance gates (Research, Plan, Build,
+# This workflow enforces the five ARK OS governance gates (Research, Plan, Build,
 # Ship, Run). It does NOT deploy anything.
 #
 # Deployment is intentionally excluded from this template. It is hosting-specific

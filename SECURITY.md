@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-ArkOS is currently at v0.2.1. Security fixes are applied to the latest release only.
+ARK OS is currently at v0.2.1. Security fixes are applied to the latest release only.
 
 | Version | Supported |
 |---|---|
@@ -12,7 +12,7 @@ ArkOS is currently at v0.2.1. Security fixes are applied to the latest release o
 
 ## Coordinated disclosure
 
-ARK360 follows coordinated disclosure. If you discover a security vulnerability in ArkOS:
+ARK360 follows coordinated disclosure. If you discover a security vulnerability in ARK OS:
 
 1. **Do not open a public GitHub issue.** Public disclosure before a fix is available puts users at risk.
 
@@ -38,10 +38,10 @@ For general issues (non-security), use the GitHub issue tracker.
 
 ## Scope
 
-This policy covers the ArkOS framework files and templates in this repository.
+This policy covers the ARK OS framework files and templates in this repository.
 
-It does not cover projects built using ArkOS. Those projects are the responsibility of their owners.
+It does not cover projects built using ARK OS. Those projects are the responsibility of their owners.
 
 ---
 
-*ArkOS is an open-source release from ARK360 - building intelligent enterprise systems to amplify human excellence.*
+*ARK OS is an open-source release from ARK360 - building intelligent enterprise systems to amplify human excellence.*
