@@ -2,6 +2,8 @@
 
 A developer with no prior ArkOS knowledge can follow this guide and make their first governed commit in 30 to 60 minutes. Wiring CI commands for a full stack typically takes an afternoon. The 15-minute path is "click template, clone, commit the placeholders", useful for kicking the tyres but not for real work.
 
+`npx create-arkos` and `npx arkos upgrade` are **planned and not available**. Use the GitHub template steps below.
+
 ---
 
 ## Before you start
@@ -303,6 +305,6 @@ Fill in `.arkos/proof-sheet.md` with your project name, owner name, and review d
 | `.arkos/proof-sheet.md` | Procurement evidence - fill before first procurement review |
 | `.github/workflows/arkos.yml` | CI workflow - replace placeholder steps with real commands |
 | `.arkos/scripts/check-banned-patterns.sh` | Banned pattern script - replace stack-specific examples |
-| `docs/framework.md` | Full ArkOS v0.1 framework document |
+| `docs/framework.md` | Full ArkOS v0.2.1 framework document |
 | `docs/standards.md` | Standards reference with versions and links |
 | `CONTRIBUTING.md` | How to contribute to ArkOS itself |

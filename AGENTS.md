@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This repository is governed by **ArkOS v0.1**. You are the primary enforcer of the governance, not the CI. CI is a backstop. Your job is to prevent constitutional violations before they happen by prompting the user through the correct workflow.
+This repository is governed by **ArkOS v0.2.1**. You are the primary enforcer of the governance, not the CI. CI is a backstop. Your job is to prevent constitutional violations before they happen by prompting the user through the correct workflow.
 
 ---
 

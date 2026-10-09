@@ -8,8 +8,12 @@ This project follows [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-10-16
+
 ### Changed
 
+- Framework version labels aligned to `0.2.1` in `.arkos/arkos.yml`, `AGENTS.md`, `.arkos/proof-sheet.md`, `docs/standards.md`, `docs/framework.md`, `README.md`, `QUICKSTART.md`, and `SECURITY.md` (SPEC-0009)
+- `npx create-arkos` and `npx arkos upgrade` documented as planned and not available; GitHub **Use this template** (or clone of this repository) is the current adoption path (SPEC-0009)
 - `.arkos/arkos.yml` bumped to `arkos-version: "0.2"` and now declares `claude-extension: true` under `ide-adapters` (SPEC-0005)
 - `.arkos/specs/0001` to `0004` `owner` fields updated from `@parkjadev` / `@ARK360` to `@ark360-hq` after the repository moved to the `ark360-hq` organisation (SPEC-0006)
 - `CHANGELOG.md` `[0.1.0]` release link now points to `ark360-hq/arkos` (SPEC-0006)
@@ -24,6 +28,8 @@ This project follows [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/
 
 ### Added
 
+- `.arkos/specs/0009-v0.2.1-cleanup-release.md` - spec for the v0.2.1 cleanup release (SPEC-0009)
+- `NOTICE` - ARK360 copyright and attribution moved out of `LICENSE` so GitHub can detect Apache-2.0 (SPEC-0009)
 - `.claude/` Claude Code extension layer: `README.md`, `settings.json` (hooks disabled by default), `settings.local.json.example`, `rules/arkos.md`, `commands/governance-check.md`, `commands/scaffold-spec.md`, `hooks/block-edit-on-main.sh`, and `hooks/README.md` (SPEC-0005)
 - `.arkos/specs/0005-claude-code-extension-layer.md` and `.arkos/adr/0004-claude-code-extension-layer.md` - spec and ADR for the optional Claude Code extension layer (SPEC-0005)
 - `.mcp.json.example` example-only MCP template, and `.gitignore` ignoring `.claude/settings.local.json`, `.mcp.json`, and `CLAUDE.local.md` (SPEC-0005)
@@ -42,6 +48,8 @@ This project follows [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/
 
 ### Fixed
 
+- `LICENSE` restored to the unmodified Apache License 2.0 text so GitHub detects Apache-2.0 (SPEC-0009)
+- `CHANGELOG.md` `[0.1.0]` footer no longer points at the non-existent `v0.1.0` tag; Keep a Changelog compare links added for `[Unreleased]` and `[0.2.1]` (SPEC-0009)
 - `.github/workflows/arkos.yml` gate jobs no longer override `name:`, so their check-run names match the `plan-gate` / `build-gate` / `ship-gate` / `run-readiness` contexts documented in `QUICKSTART.md` and `README.md`; previously branch protection requiring those contexts could never match and blocked merges (SPEC-0007)
 - `docs/framework.md` conformance summary referenced non-existent `.arkos/proof-essential-eight.md`; corrected to `.arkos/proof-sheet.md` (SPEC-0003)
 - `check-banned-patterns.sh` bare-TODO check now excludes `.md`, `.sh`, `.yml`, and `.yaml` files via a configurable `TODO_EXCLUDED_REGEX`, preventing false positives when documentation or tooling files describe the TODO pattern in prose or enforce it in code
@@ -121,4 +129,6 @@ This project follows [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/
 
 ---
 
-[0.1.0]: https://github.com/ark360-hq/arkos/releases/tag/v0.1.0
+[Unreleased]: https://github.com/ark360-hq/arkos/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/ark360-hq/arkos/compare/0583d0d7f2d70ecefef1fd1b856cf8e1f13315bd...v0.2.1
+[0.1.0]: https://github.com/ark360-hq/arkos/compare/349f709efc9af22b38d969eb33370d4620630c19...0583d0d7f2d70ecefef1fd1b856cf8e1f13315bd
