@@ -1,9 +1,9 @@
 # ArkOS framework configuration
 # This file declares the framework version and modules active in this repository.
-# It is read by ArkOS tooling (npx arkos upgrade, npx arkos proof).
+# Planned tooling (not published yet): npx arkos upgrade, npx arkos proof.
 
 # The version of the ArkOS framework this repository was initialised with.
-arkos-version: "0.2"
+arkos-version: "0.2.1"
 
 # Short identifier for this project. Used in proof sheet generation.
 project: "arkos"

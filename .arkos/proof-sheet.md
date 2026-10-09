@@ -1,6 +1,6 @@
 # ArkOS Proof Sheet - <Project Name>
 
-This codebase was built under **ArkOS v0.1** governance.
+This codebase was built under **ArkOS v0.2.1** governance.
 The complete evidence trail is in the repository.
 
 Fill in the `<placeholder>` fields before presenting this document to a procurement reviewer.

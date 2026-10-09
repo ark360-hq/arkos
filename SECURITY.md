@@ -2,11 +2,11 @@
 
 ## Supported versions
 
-ArkOS is currently at v0.1. Security fixes are applied to the latest release only.
+ArkOS is currently at v0.2.1. Security fixes are applied to the latest release only.
 
 | Version | Supported |
 |---|---|
-| 0.1.x | Yes |
+| 0.2.x | Yes |
 
 ---
 

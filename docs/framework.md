@@ -1,7 +1,7 @@
 # ARKOS
 ## The Governed Operating System for Agentic Software Development
 
-**Version 0.1 (Draft Framework Document)** | **Australian English** | **May 2026**
+**Version 0.2.1** | **Australian English** | **October 2026**
 
 > An open framework from ARK360 — building intelligent enterprise systems to amplify human excellence.
 
@@ -127,7 +127,7 @@ Mandatory **[M]**, recommended **[R]**, optional **[O]**.
 ```markdown
 # AGENTS.md
 
-This repository is governed by **ArkOS v0.1**. Read `.arkos/constitution.md` before doing anything else.
+This repository is governed by **ArkOS v0.2.1**. Read `.arkos/constitution.md` before doing anything else.
 
 ## Project
 A short paragraph: what this is, who uses it, why it exists. No marketing copy.
@@ -307,11 +307,11 @@ CI cannot fully enforce the Run gate. ArkOS ships a `run-readiness` checklist in
 
 ## 8. Packaging and distribution
 
-1. **GitHub template repository** (`arkos-template`). Click "Use this template" to seed a new repo with the full file tree.
-2. **CLI scaffolder** (`npx create-arkos@latest`). Five questions, writes the tree. Updatable with `npx arkos upgrade`.
-3. **Modules registry** (`arkos-modules`). Stack add-ons: `arkos-module-nextjs`, `arkos-module-fastify`, `arkos-module-llm-feature`.
+1. **GitHub template repository** (current). Click "Use this template" on this repository to seed a new repo with the full file tree. You can also clone this repository and copy the tree.
+2. **CLI scaffolder** (`npx create-arkos@latest`) — **planned, not available**. Five questions, writes the tree. Updatable with `npx arkos upgrade` (also planned, not available).
+3. **Modules registry** (`arkos-modules`) — planned. Stack add-ons: `arkos-module-nextjs`, `arkos-module-fastify`, `arkos-module-llm-feature`.
 
-**Versioning:** `.arkos/arkos.yml` records the framework version and modules adopted. `npx arkos upgrade` performs a three-way merge — user content in `specs/`, `adr/`, `threat-models/`, `runbooks/` is preserved; framework content is overwritable.
+**Versioning:** `.arkos/arkos.yml` records the framework version and modules adopted. When published, `npx arkos upgrade` will perform a three-way merge — user content in `specs/`, `adr/`, `threat-models/`, `runbooks/` is preserved; framework content is overwritable. Until then, adopt or update ArkOS by using this GitHub template or by copying files from this repository.
 
 **Licensing:** Apache 2.0. Maximises adoption. Grants patent peace. Requires downstream attribution to ARK360.
 
@@ -321,7 +321,7 @@ CI cannot fully enforce the Run gate. ArkOS ships a `run-readiness` checklist in
 
 ### Solo dev, one afternoon
 
-1. `npx create-arkos@latest my-project`.
+1. Click **Use this template** on GitHub, or clone this repository and copy the tree. (`npx create-arkos@latest` is planned and is not available yet.)
 2. Edit `.arkos/constitution.md` — five minutes.
 3. Edit `AGENTS.md` — replace stack and commands — ten minutes.
 4. Write the first spec in `.arkos/specs/0001-mvp.md` — twenty minutes.
@@ -341,7 +341,7 @@ Agents that previously drifted, hallucinated APIs and produced phantom completio
 ```markdown
 # ArkOS Proof Sheet — <Project Name>
 
-This codebase was built under **ArkOS v0.1** governance.
+This codebase was built under **ArkOS v0.2.1** governance.
 The complete evidence trail is in the repository.
 
 ## Conformance summary
@@ -435,7 +435,7 @@ Write the way people think in high-stakes meetings. Short sentences. Real rhythm
 
 **Stage 1 (next 2 weeks):** Ship `arkos-template` on GitHub under the ARK360 org. Apache 2.0. Tag `v0.1.0`. Pilot on one live engagement.
 
-**Stage 2 (weeks 3-6):** Build `npx create-arkos@latest` CLI with `arkos upgrade` and IDE adapter selection.
+**Stage 2 (planned):** Build `npx create-arkos@latest` CLI with `arkos upgrade` and IDE adapter selection. These commands are not published yet.
 
 **Stage 3 (weeks 7-12):** Modules registry and an `arkos proof` command that generates a populated proof sheet from the repo.
 

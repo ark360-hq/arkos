@@ -6,6 +6,8 @@ ArkOS is a GitHub template repository. Use it as the starting point for any proj
 
 It is a files-and-conventions framework. No runtime. No inference proxy. No vendor lock-in. The governance travels with the codebase.
 
+`npx create-arkos` and `npx arkos upgrade` are **planned and not available**. The current way to use ArkOS is to click **Use this template** on GitHub (or clone this repository and copy the file tree). See Quickstart below.
+
 ---
 
 ## What ArkOS gives you
@@ -130,7 +132,7 @@ The banned-pattern checks in `.arkos/scripts/check-banned-patterns.sh` include t
 ## Framework documentation
 
 - `QUICKSTART.md` - step-by-step onboarding guide
-- `docs/framework.md` - the ArkOS v0.1 framework document
+- `docs/framework.md` - the ArkOS v0.2.1 framework document
 - `docs/standards.md` - standards reference with versions and rationale
 - `docs/adr/` - framework-level architectural decisions
 - `CONTRIBUTING.md` - how to propose changes to ArkOS itself
@@ -139,6 +141,6 @@ The banned-pattern checks in `.arkos/scripts/check-banned-patterns.sh` include t
 
 ## Licence
 
-Apache 2.0. Copyright 2026 ARK360.
+Apache 2.0. Copyright 2026 ARK360. See `LICENSE` and `NOTICE`.
 
 ArkOS is an open-source release from ARK360 - building intelligent enterprise systems to amplify human excellence.
