@@ -8,7 +8,7 @@ This project follows [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/
 
 ## [Unreleased]
 
-## [0.2.1] - 2026-10-16
+## [0.2.1] - 2026-10-09
 
 ### Changed
 
