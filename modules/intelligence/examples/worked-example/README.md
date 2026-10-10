@@ -2,31 +2,69 @@
 
 Adopt the Intelligence module without cloning btros.
 
-This example composes the extracted Azure OpenAI and Azure AI Search Bicep and shows how a product calls the governed gateway. It does not deploy anything. It does not create Azure, Entra, or Stripe resources.
+This example shows how to register the extracted seams and call them. It does not deploy anything. It does not create Azure, Entra, or Stripe resources. It does not use a product HTTP `/v1` gateway.
 
-Sources: [btros#472](https://github.com/ark360-hq/btros/pull/472) and [btros#473](https://github.com/ark360-hq/btros/pull/473). Extract, not a fork.
+Sources: btros main `a04a31a`, [btros#472](https://github.com/ark360-hq/btros/pull/472) and [btros#473](https://github.com/ark360-hq/btros/pull/473). Extract, not a fork.
 
-## Files
+## Register
 
-| File | Role |
-|---|---|
-| [main.bicep](main.bicep) | Composes `openai.bicep` and `search.bicep` |
-| [parameters.example.json](parameters.example.json) | Placeholder parameters. Replace every `REPLACE_*` value in your tenant |
-| [gateway-calls.md](gateway-calls.md) | How to call complete, retrieve, and tools through the gateway |
-| [audit-record.example.json](audit-record.example.json) | Shape of the required audit record |
+```csharp
+using Arkos.Intelligence.Infrastructure;
 
-## Steps
+builder.Services.AddArkosIntelligence(builder.Configuration, builder.Environment.EnvironmentName);
+```
 
-1. Copy this folder and `../../bicep/` into your product repository.
-2. Edit a private parameters file. Do not commit secrets. Use your secret store for credentials.
-3. Review [gateway-calls.md](gateway-calls.md). Wire your product AI client to `POST /v1/complete` and `POST /v1/retrieve`.
-4. Do not add an Azure OpenAI or Azure AI Search SDK call from the product. The gateway is the only path.
-5. If you deploy, do it in your tenant. Do not deploy from this ARK OS repository.
+Development and Testing get stubs that perform no outbound HTTP. Other environments register the Azure HttpClient adapters. A partial or illegal `AzureOpenAI:*` or `AzureAiSearch:*` binding fails startup. An absent binding does not.
+
+## Bind (customer tenant)
+
+Set these in the adopter secret store. Do not commit secrets.
+
+```
+AzureOpenAI:Endpoint=https://{resource}.openai.azure.com/
+AzureOpenAI:Deployment={regional-standard-deployment}
+AzureOpenAI:Region=australiaeast
+AzureOpenAI:TenantMode=Client
+AzureOpenAI:DeploymentType=Standard
+AzureOpenAI:ApiKey=   # omit to use DefaultAzureCredential
+
+AzureAiSearch:Endpoint=https://{service}.search.windows.net/
+AzureAiSearch:IndexName={index}
+AzureAiSearch:Region=australiaeast
+AzureAiSearch:TenantMode=Client
+AzureAiSearch:ApiKey=   # omit to use DefaultAzureCredential
+```
+
+Provision those Azure resources in **your** subscription. This repository does not provision them.
+
+## Call the seams
+
+```csharp
+public sealed class DraftingService(ILanguageModelClient models, IRagClient rag)
+{
+    public async Task<string> DraftAsync(Guid siteId, string question, CancellationToken cancellationToken)
+    {
+        var grounded = await rag.GroundAsync(new RetrievalQuery(siteId, question), cancellationToken);
+        var completion = await models.CompleteAsync(
+            new LanguageModelRequest(
+            [
+                new LanguageModelMessage("system", grounded.SystemInstruction),
+                new LanguageModelMessage("user", grounded.UserMessage),
+            ]),
+            cancellationToken);
+        return completion.Content;
+    }
+}
+```
+
+`IRagClient.GroundAsync` retrieves and composes. It does not call a model. `ILanguageModelClient.CompleteAsync` is the only production chat path.
+
+Do not add `Azure.AI.OpenAI` or `Azure.Search.Documents` to domain code.
 
 ## What success looks like
 
-- Bicep outputs two endpoints and an index name.
-- A completion request returns `output` and a required `audit` object.
-- A retrieval request returns `hits` and a required `audit` object.
-- A tool invocation returns `result` and a required `audit` object.
-- No raw provider SDK is on the product AI path.
+- Development resolves `StubLanguageModelClient` and `StubRetrievalClient`.
+- Production resolves `AzureOpenAILanguageModelClient` and `AzureAiSearchRetrievalClient`.
+- `eastus`, `Shared`, `GlobalStandard`, and `api.openai.com` fail closed.
+- Every search includes `siteId eq '{guid}'`.
+- Logs never contain prompt, completion, query, chunk text, or the API key.

@@ -1,0 +1,29 @@
+using Microsoft.Extensions.Logging;
+using Arkos.Intelligence;
+
+namespace Arkos.Intelligence.Infrastructure;
+
+/// <summary>
+/// SPEC-0012 REQ-003: Development/Testing stub. No outbound HTTP, no Azure credential probe.
+/// </summary>
+public sealed class StubLanguageModelClient : ILanguageModelClient
+{
+    private readonly ILogger<StubLanguageModelClient> _logger;
+
+    public StubLanguageModelClient(ILogger<StubLanguageModelClient> logger)
+    {
+        _logger = logger;
+    }
+
+    public Task<LanguageModelCompletion> CompleteAsync(
+        LanguageModelRequest request,
+        CancellationToken cancellationToken = default)
+    {
+        ArgumentNullException.ThrowIfNull(request);
+        _logger.LogInformation("DEV language-model stub; no Azure OpenAI call.");
+        return Task.FromResult(new LanguageModelCompletion(
+            "stub",
+            "stub",
+            AzureOpenAIGuard.AllowedRegions[0]));
+    }
+}

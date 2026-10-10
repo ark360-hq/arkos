@@ -16,7 +16,7 @@ This project follows [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/
 
 ### Added
 
-- Intelligence module extract at `modules/intelligence/` (Azure OpenAI Bicep, Azure AI Search Bicep, worked example, and machine-readable gateway contract) from btros#472 and btros#473; product AI stays on the governed gateway with an audit record per invocation (SPEC-0012)
+- Intelligence module extract at `modules/intelligence/` from btros main `a04a31a` (#472 Azure OpenAI adapter, #473 AI Search RAG slice): in-process C# clients, guards, stubs, and tests. No template Bicep and no product HTTP `/v1` gateway (SPEC-0012)
 - `.arkos/specs/0012-intelligence-module.md`, ADR-0005, `.arkos/threat-models/intelligence-module.md`, and `.arkos/contracts/intelligence-gateway.md` - Approved spec for a reusable Intelligence module (Azure OpenAI and Azure AI Search Bicep plus governed gateway), extracted from btros after that adapter and RAG slice land (SPEC-0012)
 - `.arkos/specs/0011-brand-rename-ark-os.md` - spec for the brand rename in prose and branding (SPEC-0011)
 - `.arkos/specs/0010-roadmap-contributing-tidy.md` - spec for the post-v0.2.1 roadmap and contributing tidy-up (SPEC-0010)

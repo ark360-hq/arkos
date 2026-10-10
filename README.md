@@ -28,7 +28,7 @@ It is a files-and-conventions framework. No runtime. No inference proxy. No vend
 | Gate definitions | `.arkos/gates/` | Machine-readable pass/fail criteria for all five gates |
 | CI workflow | `.github/workflows/arkos.yml` | Governance gates enforced on every PR and push to main |
 | Proof Sheet | `.arkos/proof-sheet.md` | Fillable procurement evidence document |
-| Intelligence module | `modules/intelligence/` | Extracted Azure OpenAI and Azure AI Search Bicep plus governed gateway (SPEC-0012) |
+| Intelligence module | `modules/intelligence/` | Extracted in-process Azure OpenAI and Azure AI Search adapters (SPEC-0012) |
 
 ---
 

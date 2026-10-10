@@ -113,6 +113,14 @@ jobs:
       - name: Intelligence module check
         run: bash modules/intelligence/tests/check-module.sh
 
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Intelligence module tests
+        run: dotnet test modules/intelligence/Arkos.Intelligence.sln --nologo
+
       - name: CHANGELOG updated
         env:
           GITHUB_BASE_REF: ${{ github.base_ref }}
