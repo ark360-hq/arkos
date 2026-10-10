@@ -110,6 +110,9 @@ jobs:
           GITHUB_BASE_REF: ${{ github.base_ref }}
         run: bash .arkos/scripts/check-banned-patterns.sh
 
+      - name: Intelligence module check
+        run: bash modules/intelligence/tests/check-module.sh
+
       - name: CHANGELOG updated
         env:
           GITHUB_BASE_REF: ${{ github.base_ref }}

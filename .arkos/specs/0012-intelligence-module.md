@@ -21,12 +21,12 @@ ARK360 products that need product AI each stand up Azure OpenAI, Azure AI Search
 
 James Park approved, on 10 October 2026, templating the Azure OpenAI and Azure AI Search Bicep plus a governed gateway contract so other ARK OS products reuse them. The reuse source is the btros Azure OpenAI adapter and RAG slice. A fork that then diverges would recreate the same split.
 
-This spec is issue #18. Implementation waits until those btros sources have landed. This token cannot see `ark360-hq/btros` (repository 404), so no btros issue number is cited here.
+This spec is issue #18. The btros sources landed on btros main as [ark360-hq/btros#472](https://github.com/ark360-hq/btros/pull/472) (Azure OpenAI adapter) and [ark360-hq/btros#473](https://github.com/ark360-hq/btros/pull/473) (AI Search RAG slice). Implementation extracts that named surface into `modules/intelligence/`. It does not fork the btros application tree.
 
 ## Out of scope
 
-1. Landing Intelligence module implementation (Bicep, example stacks, or gateway runtime) before the btros Azure OpenAI adapter and RAG slice have landed.
-2. Forking btros and developing a separate Intelligence tree.
+1. Copying the full btros application (operator console, residents, payments, or other product features) into this template.
+2. Forking btros and developing a separate Intelligence tree that then diverges.
 3. Issue #19 gate checks for non-Azure product AI and missing gateway audit.
 4. Merging to `main`, creating a git tag, or publishing a GitHub Release.
 5. Creating billable Azure, Entra, or Stripe resources.
@@ -52,6 +52,14 @@ This spec is issue #18. Implementation waits until those btros sources have land
 ### Event-driven (triggered by an event)
 
 > REQ-007: WHEN the btros Azure OpenAI adapter and RAG slice have landed, the implementation work shall extract Bicep and the gateway contract from those sources rather than rewriting them.
+
+> REQ-014: The Intelligence module shall live at `modules/intelligence/` and its README shall state that the module is extracted from btros and must not become a diverging fork.
+
+> REQ-015: The Intelligence module shall include Azure OpenAI Bicep, Azure AI Search Bicep, and a worked example under `modules/intelligence/examples/worked-example/` that an adopter can follow without cloning btros.
+
+> REQ-016: The repository shall include a machine-readable gateway contract that keeps the audit-call obligation.
+
+> REQ-017: The Intelligence module shall include a check script that verifies extract provenance, the audit obligation, the worked example gateway path, and the absence of issue #19 checks.
 
 > REQ-008: WHEN this spec lands, the repository shall include ADR-0005, a STRIDE-lite threat model at `.arkos/threat-models/intelligence-module.md`, and a gateway contract at `.arkos/contracts/intelligence-gateway.md`.
 
@@ -81,13 +89,17 @@ This spec is issue #18. Implementation waits until those btros sources have land
 | REQ-004 | Gateway contract and example route product AI calls through the gateway, not a raw provider SDK | manual |
 | REQ-005 | `.arkos/contracts/intelligence-gateway.md` requires an audit call on every gateway tool invocation | manual |
 | REQ-006 | `CHANGELOG.md` `[Unreleased]` contains SPEC-0012 | manual |
-| REQ-007 | Implementation commit extracts from the landed btros adapter and RAG slice rather than a rewrite | manual |
+| REQ-007 | Implementation cites ark360-hq/btros#472 and #473 as the landed sources and adds extracted Bicep plus the gateway contract rather than a btros fork | manual |
 | REQ-008 | ADR-0005, `.arkos/threat-models/intelligence-module.md`, and `.arkos/contracts/intelligence-gateway.md` exist and this spec links them | manual |
-| REQ-009 | `git grep -E 'azurerm_cognitive|Microsoft.Search|azure-openai' -- ':!.arkos/specs/0012-intelligence-module.md' ':!.arkos/adr/0005-intelligence-module-extract.md' ':!.arkos/threat-models/intelligence-module.md' ':!.arkos/contracts/intelligence-gateway.md' ':!CHANGELOG.md'` is empty until btros sources have landed | manual |
-| REQ-010 | Any later machine-readable contract still requires the audit call | manual |
-| REQ-011 | This PR adds no Bicep modules, example stacks, or gateway runtime | manual |
-| REQ-012 | This PR creates no Azure, Entra, or Stripe resources | manual |
-| REQ-013 | This PR does not add issue #19 gate checks or a SPEC-0013 file | manual |
+| REQ-009 | Sources have landed, so `modules/intelligence/bicep/` now contains the extracted OpenAI and Search modules | `modules/intelligence/tests/check-module.sh` |
+| REQ-010 | `.arkos/contracts/intelligence-gateway.openapi.yaml` requires an audit object on every operation | `modules/intelligence/tests/check-module.sh` |
+| REQ-011 | Implementation is allowed because #472 and #473 have landed; the check script fails if SOURCE.md does not cite those pulls | `modules/intelligence/tests/check-module.sh` |
+| REQ-012 | This change creates no Azure, Entra, or Stripe resources (Bicep is a template; it is not deployed from this repository) | manual |
+| REQ-013 | This change does not add issue #19 gate checks or a SPEC-0013 file | `modules/intelligence/tests/check-module.sh` |
+| REQ-014 | `modules/intelligence/README.md` exists and states extract-from-btros and forbids a diverging fork | `modules/intelligence/tests/check-module.sh` |
+| REQ-015 | `modules/intelligence/bicep/openai.bicep`, `modules/intelligence/bicep/search.bicep`, and `modules/intelligence/examples/worked-example/` exist | `modules/intelligence/tests/check-module.sh` |
+| REQ-016 | `.arkos/contracts/intelligence-gateway.openapi.yaml` exists and requires the audit call | `modules/intelligence/tests/check-module.sh` |
+| REQ-017 | `modules/intelligence/tests/check-module.sh` exists and exits 0 | `modules/intelligence/tests/check-module.sh` |
 
 ## Privacy notes
 

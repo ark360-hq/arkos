@@ -18,7 +18,8 @@ conformance:
 
 # Modules in use. Add stack-specific modules as you adopt them.
 # Example: arkos-module-nextjs, arkos-module-fastify, arkos-module-llm-feature
-modules: []
+modules:
+  - arkos-module-intelligence
 
 # IDE adapters active in this repository.
 # Set to true only for adapters that have a corresponding file wired.

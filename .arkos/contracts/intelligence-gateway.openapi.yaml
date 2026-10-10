@@ -1,0 +1,215 @@
+openapi: "3.1.0"
+info:
+  title: Intelligence governed gateway
+  version: "0.1.0"
+  description: >
+    Governed gateway extracted from the btros Azure OpenAI adapter
+    (ark360-hq/btros#472) and AI Search RAG slice (ark360-hq/btros#473).
+    Product AI calls go through these operations, not a raw provider SDK.
+    Every operation MUST persist an audit record before the result is
+    returned. The audit-call obligation is not optional.
+  x-arkos-spec: SPEC-0012
+  x-arkos-sources:
+    - https://github.com/ark360-hq/btros/pull/472
+    - https://github.com/ark360-hq/btros/pull/473
+servers:
+  - url: https://gateway.example.invalid
+    description: Adopter-hosted gateway. This repository does not deploy one.
+security:
+  - adopterIdentity: []
+paths:
+  /v1/complete:
+    post:
+      operationId: complete
+      summary: Product AI completion through the governed gateway
+      description: >
+        Routes a completion to Azure OpenAI. Must not be replaced with a
+        raw Azure OpenAI SDK call. Requires an audit record on the response.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CompleteRequest"
+      responses:
+        "200":
+          description: Model output plus the required audit record
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CompleteResponse"
+  /v1/retrieve:
+    post:
+      operationId: retrieve
+      summary: RAG retrieval through the governed gateway
+      description: >
+        Routes a retrieval query to Azure AI Search. Must not be replaced
+        with a raw Azure AI Search SDK call. Requires an audit record on
+        the response.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RetrieveRequest"
+      responses:
+        "200":
+          description: Search hits plus the required audit record
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RetrieveResponse"
+  /v1/tools/{toolName}:
+    post:
+      operationId: invokeTool
+      summary: Invoke a gateway tool
+      description: >
+        Every gateway tool invocation emits an audit call before the
+        result is returned (SPEC-0012 REQ-005).
+      parameters:
+        - name: toolName
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ToolRequest"
+      responses:
+        "200":
+          description: Tool result plus the required audit record
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ToolResponse"
+components:
+  securitySchemes:
+    adopterIdentity:
+      type: http
+      scheme: bearer
+      description: Adopter-configured identity. No anonymous product AI path.
+  schemas:
+    AuditRecord:
+      type: object
+      additionalProperties: false
+      required:
+        - correlationId
+        - toolName
+        - actor
+        - occurredAt
+        - backend
+        - outcome
+      properties:
+        correlationId:
+          type: string
+          minLength: 1
+        toolName:
+          type: string
+          minLength: 1
+        actor:
+          type: string
+          minLength: 1
+        occurredAt:
+          type: string
+          format: date-time
+        backend:
+          type: string
+          enum:
+            - azure-openai
+            - azure-ai-search
+        outcome:
+          type: string
+          enum:
+            - success
+            - error
+    CompleteRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - prompt
+        - actor
+      properties:
+        prompt:
+          type: string
+          minLength: 1
+        actor:
+          type: string
+          minLength: 1
+        correlationId:
+          type: string
+        toolContext:
+          type: object
+          additionalProperties: true
+    CompleteResponse:
+      type: object
+      additionalProperties: false
+      required:
+        - output
+        - audit
+      properties:
+        output:
+          type: string
+        audit:
+          $ref: "#/components/schemas/AuditRecord"
+    RetrieveRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - query
+        - actor
+      properties:
+        query:
+          type: string
+          minLength: 1
+        actor:
+          type: string
+          minLength: 1
+        correlationId:
+          type: string
+        filters:
+          type: object
+          additionalProperties: true
+    RetrieveResponse:
+      type: object
+      additionalProperties: false
+      required:
+        - hits
+        - audit
+      properties:
+        hits:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        audit:
+          $ref: "#/components/schemas/AuditRecord"
+    ToolRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - arguments
+        - actor
+      properties:
+        arguments:
+          type: object
+          additionalProperties: true
+        actor:
+          type: string
+          minLength: 1
+        correlationId:
+          type: string
+    ToolResponse:
+      type: object
+      additionalProperties: false
+      required:
+        - result
+        - audit
+      properties:
+        result:
+          type: object
+          additionalProperties: true
+        audit:
+          $ref: "#/components/schemas/AuditRecord"

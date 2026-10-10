@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "australiaeast"
+    },
+    "openAiAccountName": {
+      "value": "REPLACE_OPENAI_ACCOUNT_NAME"
+    },
+    "openAiSkuName": {
+      "value": "REPLACE_OPENAI_SKU"
+    },
+    "openAiCustomSubDomainName": {
+      "value": "REPLACE_OPENAI_SUBDOMAIN"
+    },
+    "chatDeploymentName": {
+      "value": "REPLACE_CHAT_DEPLOYMENT"
+    },
+    "chatModelName": {
+      "value": "REPLACE_CHAT_MODEL"
+    },
+    "chatModelVersion": {
+      "value": "REPLACE_CHAT_MODEL_VERSION"
+    },
+    "embeddingsDeploymentName": {
+      "value": "REPLACE_EMBEDDINGS_DEPLOYMENT"
+    },
+    "embeddingsModelName": {
+      "value": "REPLACE_EMBEDDINGS_MODEL"
+    },
+    "embeddingsModelVersion": {
+      "value": "REPLACE_EMBEDDINGS_MODEL_VERSION"
+    },
+    "searchServiceName": {
+      "value": "REPLACE_SEARCH_SERVICE_NAME"
+    },
+    "searchSkuName": {
+      "value": "REPLACE_SEARCH_SKU"
+    },
+    "searchIndexName": {
+      "value": "REPLACE_SEARCH_INDEX"
+    }
+  }
+}

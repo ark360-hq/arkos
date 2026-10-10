@@ -24,7 +24,7 @@
 
 Actors: adopter product service, adopter engineer, Azure tenant, unauthenticated attacker.
 
-This model covers the intended module. Implementation is not in this repository yet.
+This model covers the extracted module at `modules/intelligence/`. Sources: ark360-hq/btros#472 and #473.
 
 ## Trust boundaries
 
@@ -41,11 +41,11 @@ This model covers the intended module. Implementation is not in this repository 
 | Repudiation | A tool call has no audit record | M | H | Contract requires an audit call on every gateway tool invocation (SPEC-0012 REQ-005). | Open |
 | Information disclosure | Prompts or documents containing personal information leak via logs or a second provider | M | H | Only Azure OpenAI and Azure AI Search are in scope. Secrets stay in the adopter store. APP 11 notes in SPEC-0012. | Open |
 | Denial of service | Azure quota or a flood of tool calls blocks product AI | M | M | Adopter sets quotas in their tenant. This template does not create billable resources. | Open |
-| Elevation of privilege | A tool call reaches Azure resources outside the product scope | L | H | Extracted Bicep scopes OpenAI and Search to the product resource group. No Entra or Stripe resources from this repo. | Open |
+| Elevation of privilege | A tool call reaches Azure resources outside the product scope | L | H | Extracted Bicep scopes OpenAI and Search to the product resource group. Local auth is disabled. No Entra or Stripe resources from this repo. | Open |
 
 ## Residual risk
 
 | Risk | Rationale for acceptance | Re-evaluation trigger |
 |---|---|---|
 | Azure regional outage | Single-cloud product AI is the approved stack. Multi-region failover is not in SPEC-0012. | A product SLA requires an active-active AI path. |
-| This run cannot read btros | The threat model is written from issue #18 and the approved strategy, not from the unreadable btros tree. | The btros adapter and RAG slice are visible and the extract PR updates this model. |
+| This GitHub App installation cannot read the private btros tree | James named #472 and #473 as the landed sources. The extract uses that named surface (OpenAI Bicep, Search Bicep, gateway plus audit). | A later run that can read those pulls finds a different resource or operation shape. |
