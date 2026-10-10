@@ -87,18 +87,8 @@ else
   ok "no product HTTP /v1 gateway paths"
 fi
 
-if ls "$ROOT/.arkos/specs"/0013-*.md >/dev/null 2>&1; then
-  fail "SPEC-0013 file is present (issue #19 is out of scope)"
-else
-  ok "no SPEC-0013 file"
-fi
-
-if grep -R --include='*.yml' -nE 'non-Azure product AI|missing gateway audit' \
-  "$ROOT/.arkos/gates" >/dev/null 2>&1; then
-  fail "issue #19 gate checks appear in .arkos/gates"
-else
-  ok "no issue #19 gate checks in gates"
-fi
+# SPEC-0013 (issue #19) is a later approved spec. This check no longer
+# treats a SPEC-0013 file or product AI gate as out of scope.
 
 if [[ "$FAILED" == "true" ]]; then
   echo ""

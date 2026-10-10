@@ -278,6 +278,7 @@ Read it before any change.
 | Accessibility passes (WCAG 2.2 AA) | axe-core via Playwright |
 | Contracts honoured | Spectral / Pact / JSON Schema green |
 | No banned patterns | grep check |
+| Product AI uses in-process Azure guards | `check-product-ai.sh` |
 | Spec ID in PR | Regex check |
 | Conventional Commits | commitlint |
 

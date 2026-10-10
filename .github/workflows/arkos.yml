@@ -13,7 +13,7 @@ name: arkos
 #
 # What this workflow does:
 #   plan-gate     - verifies every PR references an approved spec
-#   build-gate    - runs lint, typecheck, tests, accessibility, and banned-pattern checks
+#   build-gate    - runs lint, typecheck, tests, accessibility, banned-pattern, Intelligence module, and product AI checks
 #   ship-gate     - generates SBOM, verifies CHANGELOG, runs SAST and dependency scan
 #   run-readiness - prints the human sign-off checklist required before production promotion
 #
@@ -120,6 +120,12 @@ jobs:
 
       - name: Intelligence module tests
         run: dotnet test modules/intelligence/Arkos.Intelligence.sln --nologo
+
+      - name: Product AI policy check
+        run: bash .arkos/scripts/check-product-ai.sh
+
+      - name: Product AI policy tests
+        run: bash .arkos/scripts/tests/check-product-ai/run.sh
 
       - name: CHANGELOG updated
         env:
