@@ -310,6 +310,7 @@ CI cannot fully enforce the Run gate. ARK OS ships a `run-readiness` checklist i
 1. **GitHub template repository** (current). Click "Use this template" on this repository to seed a new repo with the full file tree. You can also clone this repository and copy the tree.
 2. **CLI scaffolder** (`npx create-arkos@latest`) — **planned, not available**. Five questions, writes the tree. Updatable with `npx arkos upgrade` (also planned, not available).
 3. **Modules registry** (`arkos-modules`) — planned. Stack add-ons: `arkos-module-nextjs`, `arkos-module-fastify`, `arkos-module-llm-feature`.
+4. **Intelligence module** (`modules/intelligence/`, SPEC-0012). Extracted from btros main `a04a31a` (#472, #473) as in-process C# adapters. Not a fork of btros. No template Bicep. Adopters follow `modules/intelligence/README.md` without cloning btros.
 
 **Versioning:** `.arkos/arkos.yml` records the framework version and modules adopted. When published, `npx arkos upgrade` will perform a three-way merge — user content in `specs/`, `adr/`, `threat-models/`, `runbooks/` is preserved; framework content is overwritable. Until then, adopt or update ARK OS by using this GitHub template or by copying files from this repository.
 
