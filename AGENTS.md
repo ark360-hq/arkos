@@ -129,6 +129,7 @@ Replace each `<placeholder>` with your actual command before your first commit.
 - Do not call an external SDK or API that is not declared as a dependency without first proposing it via an ADR.
 - No unstructured debug output (e.g. `console.log`, `print`) in committed code. Use the project logger.
 - No bare `TODO` comments. Format: `TODO(#<issue-number>): description`.
+- Do not call a non-Azure product AI provider. Product AI send sites must call `AzureOpenAIGuard.EnsureCanSend` or `AzureAiSearchGuard.EnsureCanSend` in the same file (SPEC-0013). Marketing-site exceptions go in `.arkos/product-ai-allowlist.yml`.
 
 Add stack-specific banned patterns here before your first commit. Flag these proactively when you are about to write them, not after.
 

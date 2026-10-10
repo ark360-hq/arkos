@@ -1,0 +1,14 @@
+# Product AI allow-list (SPEC-0013)
+#
+# Paths listed under `paths` are not product AI. The ARK360 marketing site
+# (https://www.ark360.com.au/) may name third-party models in copy or widgets.
+# Product code must still go through AzureOpenAIGuard and AzureAiSearchGuard.
+#
+# Each entry is a repository-relative prefix. A file matches when its relative
+# path equals the prefix or starts with `prefix` (a trailing slash is implied
+# for directories).
+#
+# Adopters: add the marketing-site tree for your product, for example
+# `apps/marketing-site/` or `www/`. Do not allow-list product API or worker code.
+
+paths: []

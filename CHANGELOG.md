@@ -16,6 +16,8 @@ This project follows [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/
 
 ### Added
 
+- Build-gate product AI scan (`.arkos/scripts/check-product-ai.sh`) fails non-Azure product AI and Azure OpenAI or Azure AI Search send sites that skip `AzureOpenAIGuard.EnsureCanSend` or `AzureAiSearchGuard.EnsureCanSend`; documented marketing-site allow-list at `.arkos/product-ai-allowlist.yml` (SPEC-0013)
+- `.arkos/specs/0013-product-ai-gates.md` and ADR-0007 for the product AI gate (SPEC-0013)
 - Intelligence module extract at `modules/intelligence/` from btros main `a04a31a` (#472 Azure OpenAI adapter, #473 AI Search RAG slice): in-process C# clients, guards, stubs, and tests. No template Bicep and no product HTTP `/v1` gateway (SPEC-0012)
 - `.arkos/specs/0012-intelligence-module.md`, ADR-0005, `.arkos/threat-models/intelligence-module.md`, and `.arkos/contracts/intelligence-gateway.md` - Approved spec for a reusable Intelligence module (Azure OpenAI and Azure AI Search Bicep plus governed gateway), extracted from btros after that adapter and RAG slice land (SPEC-0012)
 - `.arkos/specs/0011-brand-rename-ark-os.md` - spec for the brand rename in prose and branding (SPEC-0011)

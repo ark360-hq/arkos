@@ -33,3 +33,7 @@ criteria:
     description: CHANGELOG updated
     evidence: CHANGELOG.md appears in the diff for this PR or push
     automated: true
+  - id: CRT-018
+    description: Product AI uses in-process Azure guards
+    evidence: check-product-ai.sh exits 0
+    automated: true

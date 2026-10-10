@@ -26,6 +26,7 @@ It is a files-and-conventions framework. No runtime. No inference proxy. No vend
 | Runbook template | `.arkos/runbooks/_template.md` | On-call runbook covering health, alerts, and rollback |
 | Contract template | `.arkos/contracts/_template.md` | OpenAPI / JSON Schema / Protobuf stub; one per external interface |
 | Gate definitions | `.arkos/gates/` | Machine-readable pass/fail criteria for all five gates |
+| Product AI allow-list | `.arkos/product-ai-allowlist.yml` | Marketing-site paths that may name third-party models; product AI is not allow-listed |
 | CI workflow | `.github/workflows/arkos.yml` | Governance gates enforced on every PR and push to main |
 | Proof Sheet | `.arkos/proof-sheet.md` | Fillable procurement evidence document |
 | Intelligence module | `modules/intelligence/` | Extracted in-process Azure OpenAI and Azure AI Search adapters (SPEC-0012) |
@@ -83,7 +84,7 @@ The workflow runs four jobs. Two run on every PR and push; two run on pushes to 
 
 **Every PR and push to main:**
 - `plan-gate` - checks that the PR title, body, or latest commit references a spec (`SPEC-[0-9]+`)
-- `build-gate` - runs install, lint, typecheck, unit tests, integration tests, accessibility tests, contract tests, and the banned-pattern check
+- `build-gate` - runs install, lint, typecheck, unit tests, integration tests, accessibility tests, contract tests, the banned-pattern check, the Intelligence module check, and the product AI policy check
 
 **Pushes to main only:**
 - `ship-gate` - generates a CycloneDX SBOM, verifies `CHANGELOG.md` was updated, runs SAST, runs dependency vulnerability scanning
@@ -127,6 +128,8 @@ The following steps in the CI workflow are placeholders. Replace them before rel
 | Dependency scan | Trivy or OSV-Scanner |
 
 The banned-pattern checks in `.arkos/scripts/check-banned-patterns.sh` include two JavaScript/TypeScript-specific examples. Replace or remove them for your stack.
+
+The product AI check in `.arkos/scripts/check-product-ai.sh` fails non-Azure product AI and Azure OpenAI or Azure AI Search send sites that do not call `AzureOpenAIGuard.EnsureCanSend` or `AzureAiSearchGuard.EnsureCanSend`. It matches the in-process Intelligence guards. It does not require an HTTP `/v1` gateway. Add marketing-site prefixes to `.arkos/product-ai-allowlist.yml`.
 
 ---
 
