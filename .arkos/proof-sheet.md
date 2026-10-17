@@ -1,6 +1,6 @@
 # ARK OS Proof Sheet - <Project Name>
 
-This codebase was built under **ARK OS v0.2.1** governance.
+This codebase was built under **ARK OS v0.2.2** governance.
 The complete evidence trail is in the repository.
 
 Fill in the `<placeholder>` fields before presenting this document to a procurement reviewer.

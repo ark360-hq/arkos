@@ -8,14 +8,18 @@ This project follows [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-10-17
+
 ### Changed
 
+- Framework version labels aligned to `0.2.2` in `.arkos/arkos.yml`, `AGENTS.md`, `.arkos/proof-sheet.md`, `docs/standards.md`, `docs/framework.md`, `README.md`, `QUICKSTART.md`, and `SECURITY.md` (SPEC-0014)
 - Brand prose and wordmark now use ARK OS (two words, all caps); camel-case and smashed-wordmark forms retired in current docs (SPEC-0011)
 - `docs/framework.md` roadmap now records v0.2.1 as released and lists v0.3 (Microsoft agentic module: Foundry Agent Service, Copilot Studio, Entra Agent ID, approvals, evals and tracing) as plan stage only; stale Stage 1 ship/tag `v0.1.0` wording removed (SPEC-0010)
 - `CONTRIBUTING.md` now matches `AGENTS.md`: every file change needs an approved spec and a feature branch, including small and documentation fixes (SPEC-0010)
 
 ### Added
 
+- `.arkos/specs/0014-v0.2.2-release.md` - spec for the v0.2.2 release (SPEC-0014)
 - Build-gate product AI scan (`.arkos/scripts/check-product-ai.sh`) fails non-Azure product AI and Azure OpenAI or Azure AI Search send sites that skip `AzureOpenAIGuard.EnsureCanSend` or `AzureAiSearchGuard.EnsureCanSend`; documented marketing-site allow-list at `.arkos/product-ai-allowlist.yml` (SPEC-0013)
 - `.arkos/specs/0013-product-ai-gates.md` and ADR-0007 for the product AI gate (SPEC-0013)
 - Intelligence module extract at `modules/intelligence/` from btros main `a04a31a` (#472 Azure OpenAI adapter, #473 AI Search RAG slice): in-process C# clients, guards, stubs, and tests. No template Bicep and no product HTTP `/v1` gateway (SPEC-0012)
@@ -144,6 +148,7 @@ This project follows [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/
 
 ---
 
-[Unreleased]: https://github.com/ark360-hq/arkos/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/ark360-hq/arkos/compare/v0.2.2...HEAD
+[0.2.2]: https://github.com/ark360-hq/arkos/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/ark360-hq/arkos/compare/0583d0d7f2d70ecefef1fd1b856cf8e1f13315bd...v0.2.1
 [0.1.0]: https://github.com/ark360-hq/arkos/compare/349f709efc9af22b38d969eb33370d4620630c19...0583d0d7f2d70ecefef1fd1b856cf8e1f13315bd

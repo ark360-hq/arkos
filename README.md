@@ -136,7 +136,7 @@ The product AI check in `.arkos/scripts/check-product-ai.sh` fails non-Azure pro
 ## Framework documentation
 
 - `QUICKSTART.md` - step-by-step onboarding guide
-- `docs/framework.md` - the ARK OS v0.2.1 framework document
+- `docs/framework.md` - the ARK OS v0.2.2 framework document
 - `docs/standards.md` - standards reference with versions and rationale
 - `docs/adr/` - framework-level architectural decisions
 - `CONTRIBUTING.md` - how to propose changes to ARK OS itself

@@ -1,7 +1,7 @@
 # ARK OS
 ## The Governed Operating System for Agentic Software Development
 
-**Version 0.2.1** | **Australian English** | **October 2026**
+**Version 0.2.2** | **Australian English** | **October 2026**
 
 > An open framework from ARK360 — building intelligent enterprise systems to amplify human excellence.
 
@@ -127,7 +127,7 @@ Mandatory **[M]**, recommended **[R]**, optional **[O]**.
 ```markdown
 # AGENTS.md
 
-This repository is governed by **ARK OS v0.2.1**. Read `.arkos/constitution.md` before doing anything else.
+This repository is governed by **ARK OS v0.2.2**. Read `.arkos/constitution.md` before doing anything else.
 
 ## Project
 A short paragraph: what this is, who uses it, why it exists. No marketing copy.
@@ -343,7 +343,7 @@ Agents that previously drifted, hallucinated APIs and produced phantom completio
 ```markdown
 # ARK OS Proof Sheet — <Project Name>
 
-This codebase was built under **ARK OS v0.2.1** governance.
+This codebase was built under **ARK OS v0.2.2** governance.
 The complete evidence trail is in the repository.
 
 ## Conformance summary
@@ -435,7 +435,7 @@ Write the way people think in high-stakes meetings. Short sentences. Real rhythm
 
 ## 13. Roadmap
 
-**Released:** v0.2.1 (9 October 2026). The GitHub template is published under the `ark360-hq` organisation. Apache 2.0.
+**Released:** v0.2.2 (17 October 2026). Previous: v0.2.1 (9 October 2026). The GitHub template is published under the `ark360-hq` organisation. Apache 2.0.
 
 **v0.3 (plan stage only):** Microsoft agentic module covering Foundry Agent Service, Copilot Studio, Entra Agent ID, approvals, evals and tracing. Nothing is built until a spec (and any required ADR, contract, or threat model) is approved.
 
