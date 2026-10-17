@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-ARK OS is currently at v0.2.1. Security fixes are applied to the latest release only.
+ARK OS is currently at v0.2.2. Security fixes are applied to the latest release only.
 
 | Version | Supported |
 |---|---|

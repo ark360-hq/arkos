@@ -307,6 +307,6 @@ Fill in `.arkos/proof-sheet.md` with your project name, owner name, and review d
 | `.arkos/scripts/check-banned-patterns.sh` | Banned pattern script - replace stack-specific examples |
 | `.arkos/scripts/check-product-ai.sh` | Product AI policy scan - non-Azure providers and missing Intelligence guards |
 | `.arkos/product-ai-allowlist.yml` | Marketing-site path prefixes that are not product AI |
-| `docs/framework.md` | Full ARK OS v0.2.1 framework document |
+| `docs/framework.md` | Full ARK OS v0.2.2 framework document |
 | `docs/standards.md` | Standards reference with versions and links |
 | `CONTRIBUTING.md` | How to contribute to ARK OS itself |

@@ -3,7 +3,7 @@
 # Planned tooling (not published yet): npx arkos upgrade, npx arkos proof.
 
 # The version of the ARK OS framework this repository was initialised with.
-arkos-version: "0.2.1"
+arkos-version: "0.2.2"
 
 # Short identifier for this project. Used in proof sheet generation.
 project: "arkos"
